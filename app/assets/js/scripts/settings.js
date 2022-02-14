@@ -381,28 +381,15 @@ function bindAuthAccountLogOut(){
     })
 }
 
-let  data = null
-
 /**
  * Process a log out.
  * 
  * @param {Element} val The log out button element.
  * @param {boolean} isLastAccount If this logout is on the last added account.
  */
-function processLogOut(val, isLastAccount, skip = false) {
-    data = {
-        val,
-        isLastAccount
-    }
-    if (!skip) {
-        const parent = val.closest('.settingsAuthAccount')
-        const uuid = parent.getAttribute('uuid')
-        const account = ConfigManager.getAuthAccount(uuid)
-        if (account.type === 'microsoft') {
-            toggleOverlay(true, false, 'msOverlay')
-            ipcRenderer.send('openMSALogoutWindow', 'open')
-        }
-    }
+function processLogOut(val, isLastAccount){
+    const parent = val.closest('.settingsAuthAccount')
+    const uuid = parent.getAttribute('uuid')
     const prevSelAcc = ConfigManager.getSelectedAccount()
     AuthManager.removeAccount(uuid).then(() => {
         if(!isLastAccount && uuid === prevSelAcc.uuid){
@@ -416,11 +403,6 @@ function processLogOut(val, isLastAccount, skip = false) {
         parent.remove()
     })
 }
-
-ipcRenderer.on('MSALogoutWindowReply', (event, ...args) => {
-    toggleOverlay(false, false, 'msOverlay')
-    processLogOut(data.val, data.isLastAccount, true)
-})
 
 /**
  * Refreshes the status of the selected account on the auth account
@@ -462,7 +444,7 @@ function populateAuthAccounts(){
         const acc = authAccounts[val]
         authAccountStr += `<div class="settingsAuthAccount" uuid="${acc.uuid}">
             <div class="settingsAuthAccountLeft">
-                <img class="settingsAuthAccountImage" alt="${acc.displayName}" src="https://mc-heads.net/body/${acc.uuid}/60">
+                <img class="settingsAuthAccountImage" alt="${acc.displayName}" src="https://crafatar.com/renders/body/${acc.uuid}?scale=3&default=MHF_Steve&overlay">
             </div>
             <div class="settingsAuthAccountRight">
                 <div class="settingsAuthAccountDetails">
@@ -705,9 +687,9 @@ function resolveDropinModsForUI(){
 function bindDropinModsRemoveButton(){
     const sEls = settingsModsContainer.querySelectorAll('[remmod]')
     Array.from(sEls).map((v, index, arr) => {
-        v.onclick = async () => {
+        v.onclick = () => {
             const fullName = v.getAttribute('remmod')
-            const res = await DropinModUtil.deleteDropinMod(CACHE_SETTINGS_MODS_DIR, fullName)
+            const res = DropinModUtil.deleteDropinMod(CACHE_SETTINGS_MODS_DIR, fullName)
             if(res){
                 document.getElementById(fullName).remove()
             } else {

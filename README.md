@@ -55,8 +55,7 @@ If you download from the [Releases](https://github.com/ArdaCraft/ArdaCraftLaunch
 | -------- | ---- |
 | Windows x64 | `ardacraftlauncher-setup-VERSION.exe` |
 | macOS | `ardacraftlauncher-VERSION.dmg` |
-| macOS arm64 | `ardacraftlauncher-setup-VERSION-arm64.dmg` |
-| Linux x64 | `ardacraftlauncher-setup-VERSION.AppImage` |
+| Linux x64 | `ardacraftlauncher-VERSION-x86_64.AppImage` |
 
 ## Console
 
@@ -77,13 +76,11 @@ If you want to export the console output, simply right click anywhere on the con
 
 ## Development
 
-This section details the setup of a basic developmentment environment.
-
 ### Getting Started
 
 **System Requirements**
 
-* [Node.js][nodejs] v14
+* [Node.js][nodejs] v12
 
 ---
 
@@ -140,9 +137,13 @@ Paste the following into `.vscode/launch.json`
       "type": "node",
       "request": "launch",
       "cwd": "${workspaceFolder}",
-      "program": "${workspaceFolder}/node_modules/electron/cli.js",
-      "args" : ["."],
-      "outputCapture": "std"
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
+      },
+      "args": ["."],
+      "console": "integratedTerminal",
+      "protocol": "inspector"
     },
     {
       "name": "Debug Renderer Process",
@@ -178,7 +179,14 @@ Note that you **cannot** open the DevTools window while using this debug configu
 
 ### Note on Third-Party Usage
 
-Please give credit to the original author and provide a link to the original source. This is free software, please do at least this much.
+You may use this software in your own project so long as the following conditions are met.
+
+* Credit is expressly given to the original authors (Daniel Scalzi).
+  * Include a link to the original source on the launcher's About page.
+  * Credit the authors and provide a link to the original source in any publications or download pages.
+* The source code remain **public** as a fork of this repository.
+
+We reserve the right to update these conditions at any time, please check back periodically.
 
 ---
 
