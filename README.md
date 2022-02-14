@@ -54,10 +54,10 @@ If you download from the [Releases](https://github.com/ArdaCraft/ArdaCraftLaunch
 
 | Platform | File |
 | -------- | ---- |
-| Windows x64 | `ardacraftlauncher-setup-VERSION.exe` |
-| macOS | `ardacraftlauncher-VERSION.dmg` |
-| macOS arm64 | `ardacraftlauncher-VERSION-arm64.dmg` |
-| Linux x64 | `ardacraftlauncher-VERSION-x86_64.AppImage` |
+| Windows x64 | `ArdaCraft-Launcher-setup-VERSION.exe` |
+| macOS | `ArdaCraft-Launcher-VERSION.dmg` |
+| macOS arm64 | `ArdaCraft-Launcher-VERSION-arm64.dmg` |
+| Linux x64 | `ArdaCraft-Launcher-VERSION-x86_64.AppImage` |
 
 ## Console
 
@@ -181,7 +181,7 @@ Note that you **cannot** open the DevTools window while using this debug configu
 
 Please give credit to the original author and provide a link to the original source. This is free software, please do at least this much.
 
-For instructions on setting up Microsoft Authentication, see https://github.com/dscalzi/HeliosLauncher/blob/master/docs/MicrosoftAuth.md.
+For instructions on setting up Microsoft Authentication, see https://github.com/ArdaCraft/ArdaCraftLauncher/blob/master/docs/MicrosoftAuth.md.
 
 ---
 
