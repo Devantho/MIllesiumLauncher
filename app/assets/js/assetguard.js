@@ -234,7 +234,7 @@ class JavaGuard extends EventEmitter {
      * 
      * @returns {Promise.<OpenJDKData>} Promise which resolved to an object containing the JRE download data.
      */
-    static _latestOpenJDK(major = '8'){
+    static _latestOpenJDK(major = '17'){
 
         if(process.platform === 'darwin') {
             return this._latestCorretto(major)
@@ -380,8 +380,6 @@ class JavaGuard extends EventEmitter {
     static parseJavaRuntimeVersion(verString){
         const major = verString.split('.')[0]
         if(major == 1){
-            return JavaGuard._parseJavaRuntimeVersion_8(verString)
-        } else {
             return JavaGuard._parseJavaRuntimeVersion_9(verString)
         }
     }
@@ -427,7 +425,7 @@ class JavaGuard extends EventEmitter {
 
     /**
      * Validates the output of a JVM's properties. Currently validates that a JRE is x64
-     * and that the major = 8, update > 52.
+     * and that the major = 17, update > 52.
      * 
      * @param {string} stderr The output to validate.
      * 
@@ -459,12 +457,13 @@ class JavaGuard extends EventEmitter {
                 let verString = props[i].split('=')[1].trim()
                 console.log(props[i].trim())
                 const verOb = JavaGuard.parseJavaRuntimeVersion(verString)
-                if(verOb.major < 9){
+
+                if(verOb.major < 9) {
                     // Java 8
-                    if(verOb.major === 8 && verOb.update > 52){
+                    if (verOb.major === 8 && verOb.update > 52) {
                         meta.version = verOb
                         ++checksum
-                        if(checksum === goal){
+                        if (checksum === goal) {
                             break
                         }
                     }
@@ -566,8 +565,8 @@ class JavaGuard extends EventEmitter {
 
             // Keys for Java 1.8 and prior:
             const regKeys = [
-                '\\SOFTWARE\\JavaSoft\\Java Runtime Environment',
-                '\\SOFTWARE\\JavaSoft\\Java Development Kit'
+                '\\SOFTWARE\\JavaSoft\\JRE',
+                '\\SOFTWARE\\JavaSoft\\JDK'
             ]
 
             let keysDone = 0
@@ -1544,7 +1543,7 @@ class AssetGuard extends EventEmitter {
 
     _enqueueOpenJDK(dataDir){
         return new Promise((resolve, reject) => {
-            JavaGuard._latestOpenJDK('8').then(verData => {
+            JavaGuard._latestOpenJDK('17').then(verData => {
                 if(verData != null){
 
                     dataDir = path.join(dataDir, 'runtime', 'x64')

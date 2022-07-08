@@ -325,7 +325,7 @@ function asyncSystemScan(mcVersion, launchAfter = true){
                 // Show this information to the user.
                 setOverlayContent(
                     'No Compatible<br>Java Installation Found',
-                    'In order to join ArdaCraft, you need a 64-bit installation of Java 8. Would you like us to install a copy?',
+                    'In order to join ArdaCraft, you need a 64-bit installation of Java 17. Would you like us to install a copy?',
                     'Install Java',
                     'Install Manually'
                 )
@@ -340,7 +340,7 @@ function asyncSystemScan(mcVersion, launchAfter = true){
                         //$('#overlayDismiss').toggle(false)
                         setOverlayContent(
                             'Java is Required<br>to Launch',
-                            'A valid x64 installation of Java 8 is required to launch.<br><br>Please refer to our <a href="https://github.com/dscalzi/HeliosLauncher/wiki/Java-Management#manually-installing-a-valid-version-of-java">Java Management Guide</a> for instructions on how to manually install Java.',
+                            'A valid x64 installation of Java 17 is required to launch.<br><br>Please refer to our <a href="https://github.com/dscalzi/HeliosLauncher/wiki/Java-Management#manually-installing-a-valid-version-of-java">Java Management Guide</a> for instructions on how to manually install Java.',
                             'I Understand',
                             'Go Back'
                         )
