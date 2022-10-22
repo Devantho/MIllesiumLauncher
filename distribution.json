@@ -1,31 +1,238 @@
 {
     "version": "1.0.0",
+    "rss": "https://forums.ardacraft.me/c/announcements/5.rss",
     "discord": {
-        "clientId": "385581240906022916",
-        "smallImageText": "WesterosCraft",
-        "smallImageKey": "seal-circle"
+      "clientId": "734960858504888431",
+      "smallImageText": "ArdaCraft",
+      "smallImageKey": "seal-circle"
     },
-    "java": {
-        "oracle": "http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html"
-    },
-    "rss": "https://forum.westeroscraft.com/forum/news.2/index.rss",
     "servers": [
-        {
-            "id": "Millesium-1-16-5",
-            "name": "Millesium Production Server",
-            "description": "Main WesterosCraft server. Connect to enter the Realm.",
-            "icon": "http://mc.westeroscraft.com/WesterosCraftLauncher/files/server-prod.png",
-            "version": "3.9.4",
-            "address": "millesium.ddns.net",
-            "minecraftVersion": "1.16.5",
-            "discord": {
-                "shortId": "Production",
-                "largeImageText": "WesterosCraft Production Server",
-                "largeImageKey": "server-prod"
+      {
+        "id": "main-1.18.2",
+        "name": "ArdaCraft Main",
+        "description": "ArdaCraft Running Minecraft 1.18.2 (Forge v40.1.51)",
+        "icon": "https://ardacraft.github.io/launcher/assets/logo.png",
+        "version": "1.0.0",
+        "address": "mc.ardacraft.me:25565",
+        "minecraftVersion": "1.18.2",
+        "discord": {
+          "shortId": "Main",
+          "largeImageText": "ArdaCraft Server",
+          "largeImageKey": "server-main"
+        },
+        "mainServer": true,
+        "autoconnect": true,
+        "modules": [
+          {
+            "id": "net.minecraftforge:fmlcore:1.18.2-40.1.51",
+            "name": "Minecraft Forge (fmlcore)",
+            "type": "ForgeHosted",
+            "artifact": {
+              "size": 109652,
+              "MD5": "04003d5c396ea2faf1a3209e92cf98c9",
+              "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecraftforge/fmlcore/1.18.2-40.1.51/fmlcore-1.18.2-40.1.51.jar"
             },
-            "mainServer": true,
-            "autoconnect": true,
-            "modules": []
-        }
+            "subModules": [
+              {
+                "id": "1.18.2-40.1.51",
+                "name": "Minecraft Forge (version.json)",
+                "type": "VersionManifest",
+                "artifact": {
+                  "size": 13712,
+                  "MD5": "e021468ea227ebfe05048a93a6b412c2",
+                  "url": "https://ardacraft.github.io/launcher/repo/versions/1.18.2-forge-40.1.51/1.18.2-forge-40.1.51.json"
+                }
+              },
+              {
+                "id": "net.minecraftforge:javafmllanguage:1.18.2-40.1.51",
+                "name": "Minecraft Forge (javafmllanguage)",
+                "type": "Library",
+                "artifact": {
+                  "size": 16293,
+                  "MD5": "ead252762f8a03c23d49ce8545ffbd7c",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecraftforge/javafmllanguage/1.18.2-40.1.51/javafmllanguage-1.18.2-40.1.51.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraftforge:mclanguage:1.18.2-40.1.51",
+                "name": "Minecraft Forge (mclanguage)",
+                "type": "Library",
+                "artifact": {
+                  "size": 4987,
+                  "MD5": "9de4bd0c5bf4cf9395a7ba8f4c356029",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecraftforge/mclanguage/1.18.2-40.1.51/mclanguage-1.18.2-40.1.51.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraftforge:forge:1.18.2-40.1.51:universal",
+                "name": "Minecraft Forge (universal jar)",
+                "type": "Library",
+                "artifact": {
+                  "size": 2489172,
+                  "MD5": "f81d6176303dd850c901e9cf95d39e78",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecraftforge/forge/1.18.2-40.1.51/forge-1.18.2-40.1.51-universal.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraftforge:forge:1.18.2-40.1.51:client",
+                "name": "Minecraft Forge (client jar)",
+                "type": "Library",
+                "artifact": {
+                  "size": 5093557,
+                  "MD5": "81ecf01b2ba6a05bbcb2ab0c1a1d7a0f",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecraftforge/forge/1.18.2-40.1.51/forge-1.18.2-40.1.51-client.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraft:client:1.18.2-20220404.173914:srg",
+                "name": "Minecraft Forge (client srg)",
+                "type": "Library",
+                "artifact": {
+                  "size": 16166247,
+                  "MD5": "a0ce7261b4f77fd1319b05b95591bc68",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecraft/client/1.18.2-20220404.173914/client-1.18.2-20220404.173914-srg.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraft:client:1.18.2-20220404.173914:slim",
+                "name": "Minecraft Forge (client slim)",
+                "type": "Library",
+                "artifact": {
+                  "size": 10909711,
+                  "MD5": "62184203a1e66c6c72b415b7d6e64c0d",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecraft/client/1.18.2-20220404.173914/client-1.18.2-20220404.173914-slim.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "net.minecraft:client:1.18.2-20220404.173914:extra",
+                "name": "Minecraft Forge (client extra)",
+                "type": "Library",
+                "artifact": {
+                  "size": 9349972,
+                  "MD5": "5de62b239289ed8e596b386766b87b41",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecraft/client/1.18.2-20220404.173914/client-1.18.2-20220404.173914-extra.jar"
+                },
+                "subModules": []
+              },
+              {
+                "id": "org.apache.maven:maven-artifact:3.6.3",
+                "name": "Minecraft Forge (maven-artifact)",
+                "type": "Library",
+                "artifact": {
+                  "size": 57824,
+                  "MD5": "b83c1943a0783f3f81d4cd4c83c363e1",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/org/apache/maven/maven-artifact/3.6.3/maven-artifact-3.6.3.jar"
+                }
+              },
+              {
+                "id": "net.jodah:typetools:0.8.3",
+                "name": "Minecraft Forge (typetools)",
+                "type": "Library",
+                "artifact": {
+                  "size": 15425,
+                  "MD5": "ee4596e1413cc1a5e080c971d6064753",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/jodah/typetools/0.8.3/typetools-0.8.3.jar"
+                }
+              },
+              {
+                "id": "net.minecrell:terminalconsoleappender:1.2.0",
+                "name": "Minecraft Forge (terminalconsoleappender)",
+                "type": "Library",
+                "artifact": {
+                  "size": 15977,
+                  "MD5": "679363fa893293791e55a21f81342f87",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecrell/terminalconsoleappender/1.2.0/terminalconsoleappender-1.2.0.jar"
+                }
+              },
+              {
+                "id": "org.jline:jline-reader:3.12.1",
+                "name": "Minecraft Forge (jline-reader)",
+                "type": "Library",
+                "artifact": {
+                  "size": 150765,
+                  "MD5": "a2e7b012cd9802f83321187409174a94",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/org/jline/jline-reader/3.12.1/jline-reader-3.12.1.jar"
+                }
+              },
+              {
+                "id": "org.jline:jline-terminal:3.12.1",
+                "name": "Minecraft Forge (jline-terminal)",
+                "type": "Library",
+                "artifact": {
+                  "size": 211712,
+                  "MD5": "3c52be5ab5e3847be6e62269de924cb0",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/org/jline/jline-terminal/3.12.1/jline-terminal-3.12.1.jar"
+                }
+              },
+              {
+                "id": "org.spongepowered:mixin:0.8.5",
+                "name": "Minecraft Forge (mixin)",
+                "type": "Library",
+                "artifact": {
+                  "size": 1089277,
+                  "MD5": "19b3a2ae9e445a6e626fd7d1648cfcb8",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/org/spongepowered/mixin/0.8.5/mixin-0.8.5.jar"
+                }
+              },
+              {
+                "id": "org.openjdk.nashorn:nashorn-core:15.3",
+                "name": "Minecraft Forge (nashorn-core)",
+                "type": "Library",
+                "artifact": {
+                  "size": 2167288,
+                  "MD5": "91e98c20afa1090c344229ce28b4c53f",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/org/openjdk/nashorn/nashorn-core/15.3/nashorn-core-15.3.jar"
+                }
+              },
+              {
+                "id": "cpw.mods:bootstraplauncher:1.0.0",
+                "name": "Minecraft Forge (bootstraplauncher)",
+                "type": "Library",
+                "artifact": {
+                  "size": 7828,
+                  "MD5": "1632575563bb6ead2ae3a087945f18be",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/cpw/mods/bootstraplauncher/1.0.0/bootstraplauncher-1.0.0.jar"
+                }
+              },
+              {
+                "id": "net.minecraftforge:fmlloader:1.18.2-40.1.51",
+                "name": "Minecraft Forge (fmlloader)",
+                "type": "Library",
+                "artifact": {
+                  "size": 238924,
+                  "MD5": "83f7558349d9a0764862d605b9afdc22",
+                  "url": "https://ardacraft.github.io/launcher/repo/lib/net/minecraftforge/fmlloader/1.18.2-40.1.51/fmlloader-1.18.2-40.1.51.jar"
+                }
+              }
+            ]
+          },
+            {
+            "id": "options.txt",
+            "name": "options.txt",
+            "type": "File",
+            "artifact": {
+              "size": 3842,
+              "url": "https://ardacraft.github.io/launcher/servers/main-1.18.2/files/options.txt",
+              "path": "options.txt"
+            }
+          },
+          {
+            "id": "optionsof.txt",
+            "name": "optionsof.txt",
+            "type": "File",
+            "artifact": {
+              "size": 1406,
+              "url": "https://ardacraft.github.io/launcher/servers/main-1.18.2/files/optionsof.txt",
+              "path": "optionsof.txt"
+            }
+          }
+        ]
+      }
     ]
-}
+  }
