@@ -14,7 +14,7 @@
         "icon": "https://ardacraft.github.io/launcher/assets/logo.png",
         "version": "1.0.0",
         "address": "mc.ardacraft.me:25565",
-        "minecraftVersion": "1.18.2",
+        "minecraftVersion": "1.16.5",
         "discord": {
           "shortId": "Main",
           "largeImageText": "ArdaCraft Server",
@@ -24,7 +24,7 @@
         "autoconnect": true,
         "modules": [
           {
-            "id": "net.minecraftforge:fmlcore:1.18.2-40.1.51",
+            "id": "net.minecraftforge:fmlcore:1.16.5-40.1.51",
             "name": "Minecraft Forge (fmlcore)",
             "type": "ForgeHosted",
             "artifact": {
@@ -34,7 +34,7 @@
             },
             "subModules": [
               {
-                "id": "1.18.2-40.1.51",
+                "id": "1.16.5-40.1.51",
                 "name": "Minecraft Forge (version.json)",
                 "type": "VersionManifest",
                 "artifact": {

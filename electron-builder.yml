@@ -1,5 +1,5 @@
-appId: 'ardacraftlauncher'
-productName: 'ArdaCraft Launcher'
+appId: 'millesiumlauncher'
+productName: 'Millesium Launcher'
 artifactName: '${productName}-setup-${version}.${ext}'
 
 copyright: 'Copyright © 2018-2022 Daniel Scalzi'
