@@ -9,11 +9,11 @@
     "servers": [
       {
         "id": "main-1.18.2",
-        "name": "ArdaCraft Main",
+        "name": "Millesium",
         "description": "ArdaCraft Running Minecraft 1.18.2 (Forge v40.1.51)",
         "icon": "https://ardacraft.github.io/launcher/assets/logo.png",
         "version": "1.0.0",
-        "address": "mc.ardacraft.me:25565",
+        "address": "millesium.ddns.net",
         "minecraftVersion": "1.16.5",
         "discord": {
           "shortId": "Main",

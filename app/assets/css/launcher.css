@@ -32,6 +32,7 @@
 body, html, div {
     margin: 0px;
     padding: 0px;
+    cursor: url('/app/assets/css/cursor.png'), auto;
 }
 
 /* Reset p presets. */
@@ -2974,8 +2975,8 @@ input:checked + .toggleSwitchSlider:before {
     border: 2px solid #cad7e1;
     box-sizing: border-box;
     background: rgba(1, 2, 1, 0.5);
-    height: 70px;
-    width: 70px;
+    height: 80px;
+    width: 80px;
     box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
     overflow: hidden;
     position: relative;
@@ -3013,7 +3014,7 @@ input:checked + .toggleSwitchSlider:before {
 
 /* User profile name text. */
 #user_text {
-    font-size: 12px;
+    font-size: 15px;
     min-width: 135px;
     font-weight: 900;
     letter-spacing: 1px;
@@ -3051,19 +3052,24 @@ input:checked + .toggleSwitchSlider:before {
 
 /* Divider bar between the external and internal icons. */
 .mediaDivider {
-    height: 1px;
-    width: 14px;
+    height: 4px;
+    width: 16px;
     background: rgb(255, 255, 255);
     margin: 10px 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 /* Social media icon shared styles. */
 .mediaSVG {
     fill: #ffffff;
-    height: 12px;
+    height: 16px;
     transition: 0.25s ease;
     cursor: pointer;
-    height: 12px;
+    height: 16px;
     width: 25px;
 }
 .mediaSVG:hover,
@@ -3094,7 +3100,7 @@ input:checked + .toggleSwitchSlider:before {
 /* Settings icon colors. */
 #settingsSVG {
     stroke: #ffffff;
-    height: 15px;
+    height: 20px;
 }
 .mediaButton:hover #settingsSVG,
 .mediaButton:focus #settingsSVG,
@@ -3134,6 +3140,15 @@ input:checked + .toggleSwitchSlider:before {
     visibility: visible;
     opacity: 1;
     transition-delay:0s;
+    
+}
+
+#linkSVG:hover,
+#linkURL:focus #twitterSVG {
+    fill: #1da1f2;
+}
+#linkSVG:active {
+    fill: #1b8dd4;
 }
 
 /* Twitter icon colors. */
@@ -3159,18 +3174,20 @@ input:checked + .toggleSwitchSlider:before {
 #youtubeSVG:hover,
 #youtubeURL:focus #youtubeSVG {
     fill: #f00;
+    
 }
 #youtubeSVG:active {
     fill: #ea0202;
+    
 }
 
 /* Discord icon colors. */
 #discordSVG:hover,
 #discordURL:focus #discordSVG {
-    fill: #7288d9;
+    fill: #5876e3;
 }
 #discordSVG:active {
-    fill: #657ac4;
+    fill: #5876e3;
 }
 
 /*******************************************************************************
