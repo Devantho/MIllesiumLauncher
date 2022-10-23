@@ -1,9 +1,9 @@
 {
     "version": "1.0.0",
-    "rss": "https://forums.ardacraft.me/c/announcements/5.rss",
+    "rss": "",
     "discord": {
       "clientId": "734960858504888431",
-      "smallImageText": "ArdaCraft",
+      "smallImageText": "Millesium",
       "smallImageKey": "seal-circle"
     },
     "servers": [
